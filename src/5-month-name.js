@@ -1,8 +1,18 @@
 const months = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
+  'January', 
+  'February', 
+  'March', 
+  'April', 
+  'May', 
+  'June',
+  'July', 
+  'August', 
+  'September', 
+  'October', 
+  'November', 
+  'December'
 ]
 
-export const monthName = (monthNumber) => {
-  return months[monthNumber]
-}
+months.unshift(null)
+
+export const monthName = (monthNumber) => monthNumber === 0 || monthNumber > 12 ? null : months[monthNumber];
